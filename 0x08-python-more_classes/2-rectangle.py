@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """
 a class module that defines a rectangle
-based on task 1-rectangle.py
-a public isinstance method perimeter that returns rectangle perimeter
 """
 
 
@@ -11,6 +9,15 @@ class Rectangle:
     a class that defines a rectangle
     """
     def __init__(self, width=0, height=0):
+        """
+        initialising the rectangle class
+        Args:
+            width: represent the width
+            height: represnt the height of the rectangle
+        Raises:
+            TypeError: if size is not integer
+            ValueError: if value is less than 0
+        """
         self.width = width
         self.height = height
 
