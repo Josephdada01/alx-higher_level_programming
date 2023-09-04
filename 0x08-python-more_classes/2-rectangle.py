@@ -2,8 +2,6 @@
 """
 a class module that defines a rectangle
 based on task 1-rectangle.py
-added a public isinstance method area that returns
-the rectangle area and
 a public isinstance method perimeter that returns rectangle perimeter
 """
 
@@ -64,7 +62,7 @@ class Rectangle:
 
     def perimeter(self):
         """
-        a public isinstance that returns the rectangle perimeter
+        that returns the rectangle perimeter
         """
         if self.__width == 0 or self.__height == 0:
             return (0)
