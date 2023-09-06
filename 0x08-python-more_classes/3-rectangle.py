@@ -4,16 +4,7 @@
 
 class Rectangle:
     """
-    a class that defines a rectangle
-    args:
-        width - the width
-        height - the height
-    returns:
-        Rectangle
-    raises:
-        TypeError
-        ValueError
-    """
+    a class that defines a rectangle """
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -57,13 +48,9 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """
-        Returns: a string representation of rectangle using '#'
-        Returns:
-            str: A string representation of the rectangle
-        """
+        """ Returns: a string representation of rectangle """
         string = ""
         if self.__width != 0 and self.__height != 0:
             string += "\n".join("#" * self.__width
                                 for j in range(self.__height))
-            return string
+        return string
