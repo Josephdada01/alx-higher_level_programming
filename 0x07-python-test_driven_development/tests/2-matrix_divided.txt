@@ -1,0 +1,29 @@
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+>>> matrix = [
+...	[1, 45, 3],
+...	[4, 9, 6],
+... ]
+>>> print(matrix_divided(matrix, 3))
+[[0.33, 15.0, 1.0], [1.33, 3.0, 2.0]]
+
+>>> matrix = [
+...	[9, 12, 15],
+...	[18, 21, 24],
+... ]
+>>> print(matrix_divided(matrix, 3))
+[[3.0, 4.0, 5.0], [6.0, 7.0, 8.0]]
+
+>>> matrix = [
+...	[9, 12, 21],
+...	[33, 15, 18],
+... ]
+>>> print(matrix_divided(matrix, 3))
+[[3.0, 4.0, 7.0], [11.0, 5.0, 6.0]]
+
+>>> matrix = [
+...	[6, 27, 30],
+...	[36, 39, 42],
+... ]
+>>> print(matrix_divided(matrix, 3))
+[[2.0, 9.0, 10.0], [12.0, 13.0, 14.0]]

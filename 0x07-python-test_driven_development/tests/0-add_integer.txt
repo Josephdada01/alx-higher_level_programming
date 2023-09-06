@@ -1,78 +1,20 @@
-=====
-How to use 0-add_integer.py
-=====
+>>> add_integer = __import__('0-add_integer').add_integer
 
-This modules defines an integer addition function ''add_integer(a, b=98)''.
-
-The Usage
-=====
-
-
-''add_integer(....)'' returns the addition of the two args it takes in.
-For the numbers, the result is equal using the ''+'' operator.
-
-::
-
-add_integer = __import__('0-add_integer').add_integer
-
-The function works with adding two integer
-::
-
-	>>> add_integer(5, 5)
-	10
-
-	>>> add_integer(6, -1)
-	5
-
-The function also works with two floating points values
-::
-
-	>>> add_integer(3.3, 5.5)
-	8.8
-
-You should also understand that the floats are casted to int before the
-addition is performed.
-::
-
-	>>> add_integer(3.9, 0.2)
-	3
-
-	>>> add_integer(-3.9, 0.2)
-	-3
-
-Float and non-float can be combined as well
-::
-
-	>>> add_integer(3.3, -2)
-	1.3
-
-The second number is optional becaus it was set to 98 by default
-if you add it or not, it will still work
-::
-	>>> add_integer(5)
-	103
-
-None Numbers
-=====
-This function ''add_integer'' will only works if both numbers are integer or
-float. Otherwise, if one of the args is non-integer and non-float, it will 
-raise a TypeError.
-
-::
-	>>> add_integer("hello", 3)
-
-	Trace bar(most recent call last):
-	TypeError: a must be an integer
-
-This function fails infinity test
-
-::
-	>>> add_integer(2, float('inf'))
-
-OverFlowError: cannot convert float
-infinity to an integer
-
-This function fails the Nan test
-
-	>>> add_integer(2, float('nan'))
-	ValueError: cannot convert Float Nan to integer
+>>> add_integer(5, 5)
+10
+>>> add_integer(6, -1)
+5
+>>> add_integer(3.3, 5.3)
+8
+>>> add_integer(3.9, 0.2)
+3
+>>> add_integer(-3.9, 0.2)
+-3
+>>> add_integer(3.3, -2)
+1
+>>> add_integer(-5, -5)
+-10
+>>> add_integer(5)
+103
+>>> add_integer(1, 1)
+2
