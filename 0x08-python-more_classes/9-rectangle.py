@@ -79,6 +79,4 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """ a class method that returns a new Rectangle instance"""
-        if size < 0:
-            raise ValueError("size must be a positive integer")
         return cls(size, size)
