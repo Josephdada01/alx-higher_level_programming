@@ -1,0 +1,3 @@
+>>> test_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("This is a simple sentence. It has a question:

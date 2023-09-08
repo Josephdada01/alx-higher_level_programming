@@ -1,0 +1,19 @@
+Importing the say_my_name function
+
+Testing the function
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+>>> say_my_name("John", "Doe")
+My name is John Doe
+
+>>> say_my_name("Alice", "Smith")
+My name is Alice Smith
+
+>>> say_my_name("Bob", "Johnson")
+My name is Bob Johnson
+
+>>> say_my_name("Emma", "Davis")
+My name is Emma Davis
+
+>>> say_my_name("Michael", "Jordan")
+My name is Micheal Jordan
