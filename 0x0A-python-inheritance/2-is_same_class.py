@@ -8,4 +8,4 @@ or false
 
 def is_same_class(obj, a_class):
     """ a function that returns true if objrct is exactly same instance """
-    return isinstance(obj, a_class)
+    return (type(obj) == a_class)
