@@ -5,7 +5,6 @@ from BaseGeometry
 """
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
-""" importing Basegeometry from file 7-base_geometry """
 
 
 class Rectangle(BaseGeometry):
