@@ -1,0 +1,10 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> baseg = BaseGeometry()
+
+>>> baseg.integer_validator("the_int", 15)
+>>> baseg.integer_validator("the_width", 20)
+
+>>> baseg.integer_validator("Dog", 30)
+
+>>> baseg.integer_validator("car", 1)
