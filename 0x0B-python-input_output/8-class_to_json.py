@@ -7,9 +7,4 @@ boolean for json serializtion of an object
 
 def class_to_json(obj):
     """ the function that returns json serialization of an object """
-    if isinstance(obj,(str, int, bool)):
-        return obj
-    if isinstance(obj, list):
-        return [serialize_to_dict(item) for item in obj]
-    if isinstance(obj, dict):
-        return {key: serialize_to_dict(value) for key, value in obj.item()}
+    return obj.__dict__
