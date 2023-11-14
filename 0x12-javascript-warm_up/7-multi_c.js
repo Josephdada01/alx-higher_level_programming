@@ -9,11 +9,11 @@
  * You must use a loop (while, for, etc.)
  */
 /* setting number to the first argument passed and converting it to int */
-const numberOfTimes = parseInt(process.argv[2])
+const numberOfTimes = parseInt(process.argv[2]);
 let i = 0;
 
 if (isNaN(numberOfTimes)) {
-  console.log('Missing number of occurrences')
+  console.log('Missing number of occurrences');
 }
 for (i = 0; i < numberOfTimes; i++) {
   console.log('C is fun');
