@@ -11,7 +11,7 @@
  * You can use only one console.log
  * You must use a loop (while, for, etc.)
  */
-let i = 0;
+/* let i = 0;
 while (i <= 3) {
   switch (i) {
     case 1:
@@ -25,4 +25,9 @@ while (i <= 3) {
       break;
   }
   i++;
+} */
+const listing = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+let i = 0;
+for (i = 0; i < listing.length; i++) {
+  console.log(listing[i]);
 }
