@@ -9,7 +9,7 @@
  * You are not allowed to use var
  * You must use a loop (while, for, etc.)
  */
-const args = process.argv.slice(2);
+/* const args = process.argv.slice(2);
 const squareSize = parseInt(args[0]);
 let i = 0;
 if (isNaN(squareSize)) {
@@ -18,4 +18,22 @@ if (isNaN(squareSize)) {
   for (i = 0; i < squareSize; i++) {
     console.log('x'.repeat(squareSize));
   }
+} */
+const size = process.argv[2];
+
+// Check if the size can be converted to an integer
+const sizeInt = parseInt(size);
+
+if (!isNaN(sizeInt)) {
+/* Size is a valid integer */
+  for (let i = 0; i < sizeInt; i++) {
+    let row = '';
+    for (let j = 0; j < sizeInt; j++) {
+      row += 'X';
+    }
+    console.log(row);
+  }
+} else {
+  /* Size cannot be converted to an integer */
+  console.log('Missing size');
 }
