@@ -10,7 +10,7 @@
  * Create an instance method called print() that prints the rectangle
  * using the character X
  */
-module.exports = class Rectngle {
+module.exports = class Rectangle {
   constructor (w, h) {
     if (w === undefined || w < 1 || h === undefined || h < 1) {
       return;
