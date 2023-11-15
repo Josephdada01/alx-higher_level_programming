@@ -20,7 +20,8 @@ module.exports = class Rectngle {
   }
 
   print () {
-    for (let i = 0; i < this.height; i++) {
+    let j = 0;
+    for (j = 0; j < this.height; j++) {
       console.log('X'.repeat(this.width));
     }
   }
