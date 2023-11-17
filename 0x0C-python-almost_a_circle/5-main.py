@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 5-main """
+""" 5-main .py """
 from models.rectangle import Rectangle
 
 if __name__ == "__main__":
