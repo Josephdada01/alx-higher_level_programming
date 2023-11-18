@@ -27,7 +27,7 @@ def list_states(username, password, hbtn_0e_0_usa):
         """ fetching the rows and displaying the results """
         states = cr.fetchall()
         for state in states:
-            print(state)
+            print(f"{state[0]}: {state[1]}")
         cr.close()
         con.close()
     except MySQLdb.Error as e:
@@ -36,5 +36,7 @@ def list_states(username, password, hbtn_0e_0_usa):
 
 
 if __name__ == "__main__":
+    if len(sys.argv) != 4:
+        sys.exit(1)
     username, password, hbtn_0e_0_usa = sys.argv[1], sys.argv[2], sys.argv[3]
     list_states(username, password, hbtn_0e_0_usa)
