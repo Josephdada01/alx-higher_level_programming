@@ -25,7 +25,7 @@ def list_N_states(username, password, hbtn_0e_0_usa):
         """ executing query to retrive states that start b N & cr == cursor"""
         cr.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
         """ fetching the rows and displaying the results """
-        states = cur.fetchall()
+        states = cr.fetchall()
         for state in states:
             print(state)
         cr.close()
