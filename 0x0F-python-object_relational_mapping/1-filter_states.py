@@ -16,7 +16,7 @@ Your code should not be executed when imported
 """
 
 
-def list_N_states(username, password, hbtn_0e_0_usa):
+def list_states(username, password, hbtn_0e_0_usa):
     try:
         con = MySQLdb.connect(host='localhost', port=3306,
                               user=username, passwd=password,
@@ -37,4 +37,4 @@ def list_N_states(username, password, hbtn_0e_0_usa):
 
 if __name__ == "__main__":
     username, password, hbtn_0e_0_usa = sys.argv[1], sys.argv[2], sys.argv[3]
-    list_N_states(username, password, hbtn_0e_0_usa)
+    list_states(username, password, hbtn_0e_0_usa)
