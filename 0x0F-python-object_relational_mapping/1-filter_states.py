@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-import MySQLdb
-import sys
-
 """
 Write a script that lists all states with a name starting with N (upper N)
 from the database hbtn_0e_0_usa:
@@ -14,6 +11,9 @@ Results must be sorted in ascending order by states.id
 Results must be displayed as they are in the example below
 Your code should not be executed when imported
 """
+
+import MySQLdb
+import sys
 
 
 def list_states(username, password, hbtn_0e_0_usa):
@@ -27,7 +27,7 @@ def list_states(username, password, hbtn_0e_0_usa):
         """ fetching the rows and displaying the results """
         states = cr.fetchall()
         for state in states:
-            print(f"{state[0]}: {state[1]}")
+            print(state)
         cr.close()
         con.close()
     except MySQLdb.Error as e:
@@ -36,7 +36,5 @@ def list_states(username, password, hbtn_0e_0_usa):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
-        sys.exit(1)
     username, password, hbtn_0e_0_usa = sys.argv[1], sys.argv[2], sys.argv[3]
     list_states(username, password, hbtn_0e_0_usa)
