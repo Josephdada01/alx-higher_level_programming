@@ -24,8 +24,11 @@ def search_state(username, password, database, state_name):
         con = MySQLdb.connect(host='localhost', port=3306,
                               user=username, passwd=password, db=database)
         cursor = con.cursor()
-        query = "SELECT * FROM states WHERE name = %s ORDER BY states.id ASC"
-        cursor.execute(query, (state_name,))
+        query = "SELECT id, name\
+                        FROM states\
+                            WHERE BINARY\
+                                name = '{}';".format(state_name)
+        cursor.execute(query)
         """fetching the results"""
         states = cursor.fetchall()
         """displaying the results"""
