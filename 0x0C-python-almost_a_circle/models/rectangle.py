@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" a class rectangle module, the class is inherited from base """
+""" a class rectangle module, the class is inherited from base models"""
 
 from models.base import Base
 

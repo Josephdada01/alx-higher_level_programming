@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" a class Base module """
+""" a class Base module that all other task inherit from """
 
 import json
 

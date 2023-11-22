@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" a square module that is inherited from Rectangle """
+""" a square module that is inherited from Rectangle class """
 
 from models.rectangle import Rectangle
 
