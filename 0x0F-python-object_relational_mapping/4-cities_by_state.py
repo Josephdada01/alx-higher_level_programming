@@ -19,11 +19,13 @@ import sys
 
 def list_cities(username, password, hbtn_0e_4_usa):
     try:
-        connection = MySQLdb.connect(host='localhost', port='3306',
+        connection = MySQLdb.connect(host='localhost', port=3306,
                                      user=username, passwd=password,
                                      db=hbtn_0e_4_usa)
         cursor = connection.cursor()
-        cursor.execute("SELECT * FROM cities ORDER BY id ASC")
+        cursor.execute("SELECT cities.id, cities.name AS city_name,\
+                states.name AS state_name FROM states INNER JOIN cities\
+                ON state_id = states.id ORDER BY cities.id;")
         """Fetching the result"""
         cities = cursor.fetchall()
         for city in cities:
