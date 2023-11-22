@@ -1,5 +1,5 @@
-#!/usr/bin/python3 
-""" 
+#!/usr/bin/python3
+"""
 Once again, write a script that takes in arguments
 and displays all values in the states table of hbtn_0e_0_usa
 where name matches the argument. But this time, write
@@ -14,9 +14,9 @@ Results must be sorted in ascending order by states.id
 Results must be displayed as they are in the example below
 Your code should not be executed when imported
 """
-  
-  
-import MySQLdb 
+
+
+import MySQLdb
 from sys import argv
 
 
