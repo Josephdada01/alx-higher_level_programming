@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Doc """
+""" Documentations """
 from models.rectangle import Rectangle
 
 if __name__ == "__main__":

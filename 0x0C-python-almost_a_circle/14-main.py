@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 14-main """
+""" 14-main doc """
 from models.base import Base
 from models.rectangle import Rectangle
 

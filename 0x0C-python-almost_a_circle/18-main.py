@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 18-main """
+""" 18-main doc """
 from models.rectangle import Rectangle
 from models.square import Square
 
