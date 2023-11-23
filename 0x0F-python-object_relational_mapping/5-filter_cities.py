@@ -1,4 +1,4 @@
-#/usr/bin/python3
+#!/usr/bin/python3
 """
 a script that takes in the name of a state as an
 argument and lists all cities of that state, using the
@@ -14,8 +14,11 @@ You can use only execute() once
 The results must be displayed as they are in the example below
 Your code should not be executed when imported
 """
+
+
 import MySQLdb
 from sys import argv
+
 
 if __name__ == "__main__":
     username = argv[1]
