@@ -9,4 +9,3 @@ url=$1
 size=$(curl -s "$url" | wc -c)
 
 echo "$size"
-#curl -s "$1" | wc -c
