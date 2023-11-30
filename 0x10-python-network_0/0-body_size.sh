@@ -6,7 +6,8 @@
 
 url=$1
 
-size=$(curl -s "$url" | wc -c)
+#size=$(curl -s "$url" | wc -c)
+size=$(curl -s -w  /dev/null  "$url")
 echo "$size"
 
 
