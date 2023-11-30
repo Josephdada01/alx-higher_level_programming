@@ -5,5 +5,8 @@
 #You have to use curl
 
 url=$1
-curl -sI "$url" | awk '/Content-Lenght/ {print $2; exit}'
+
+size=$(curl -s "$url" | wc -c)
+echo "$size"
+
 
