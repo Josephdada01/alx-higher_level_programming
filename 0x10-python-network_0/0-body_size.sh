@@ -4,9 +4,9 @@
 #The size must be displayed in bytes
 #You have to use curl
 
-#url=$1
+url=$1
 
-#size=$(curl -s "$url" | wc -c)
+size=$(curl -s "$url" | wc -c)
 
-#echo "$size"
-curl -s "$1" | wc -c
+echo "$size"
+#curl -s "$1" | wc -c
