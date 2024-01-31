@@ -7,23 +7,27 @@
 const axios = require('axios');
 const process = require('process');
 
-const getCompletedTasks = async (apiUrl, userId) => {
-    try {
-        const response = await axios.get(apiUrl);
-        const tasks = response.data;
-        
-        // Filtering the completed tasks
-        const completedTasks = tasks.filter(task => task.userId === userId && task.completed);
-        
-        // Printing the number of completed tasks
-        console.log(`${userId}: ${completedTasks.length}`);
-    } catch (error) {
-        console.error(`${error.message}`);
-    }
+const getCompletedTasks = async (apiUrl) => {
+  try {
+    const response = await axios.get(apiUrl);
+    const tasks = response.data;
+
+    const taskCompleted = {};
+
+    tasks.forEach(task => {
+      if (task.completed === true) {
+        const userId = task.userId;
+        taskCompleted[userId] = (taskCompleted[userId] || 0) + 1;
+      }
+    });
+
+    console.log(taskCompleted);
+  } catch (error) {
+    console.error(`${error.message}`);
+  }
 };
 
-if (process.argv.length === 4) { // Corrected the typo in 'length'
-    const apiUrl = process.argv[2];
-    const userId = parseInt(process.argv[3]);
-    getCompletedTasks(apiUrl, userId);
+if (process.argv.length === 3) {
+  const apiUrl = process.argv[2];
+  getCompletedTasks(apiUrl);
 }
